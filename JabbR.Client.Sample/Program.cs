@@ -12,10 +12,10 @@ namespace JabbR.Client.Sample
     {
         static void Main(string[] args)
         {
-            string server = "http://localhost:16207/";
-            string roomName = "test";
-            string userName = "testclient";
-            string password = "password";
+            string server = "http://localhost/jabbr/";
+            string roomName = "dev-team";
+            string userName = "monkey";
+            string password = "apenheuvel";
 
             var client = new JabbRClient(server);
 
@@ -45,7 +45,7 @@ namespace JabbR.Client.Sample
 
             var wh = new ManualResetEventSlim();
 
-            EnsureAccount(server, userName, password);
+         //   EnsureAccount(server, userName, password);
 
             // Connect to chat
             client.Connect(userName, password).ContinueWith(task =>

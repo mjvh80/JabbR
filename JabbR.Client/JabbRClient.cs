@@ -127,6 +127,8 @@ namespace JabbR.Client
 
                     SubscribeToEvents();
 
+                    _connection.TransportConnectTimeout = TimeSpan.FromSeconds(10);
+
                     return _connection.Start(_transportFactory());
                 })
                 .Then(tcs => LogOn(tcs), taskCompletionSource)
